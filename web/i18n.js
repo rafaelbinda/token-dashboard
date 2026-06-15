@@ -88,7 +88,7 @@ const DICT = {
     range_all:'Todos', sort_tokens:'Mais tokens', sort_recent:'Mais recentes',
     // overview
     ov_title:'Visão Geral', ov_last_days:'últimos {d} dias', ov_all_time:'todo período',
-    kpi_sessions:'Sessões', kpi_turns:'Turnos', kpi_input:'Entrada', kpi_output:'Saída',
+    kpi_sessions:'Sessões', kpi_turns:'Interações', kpi_input:'Entrada', kpi_output:'Saída',
     kpi_cache_read:'Cache lido', kpi_cache_create:'Cache criado', kpi_cost:'Custo Est.',
     plan_pay:'você paga ${m}/mês no {l}',
     ov_explain:'O que esses números significam?', ov_expand:'— clique para expandir',

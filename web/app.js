@@ -53,8 +53,8 @@ function buildTopbar() {
       ${Object.keys(ROUTES).map(p => `<a href="#${p}" data-route="${p}">${t('nav_' + p.slice(1))}</a>`).join('')}
     </nav>
     <div class="spacer"></div>
-    <span class="pill" id="plan-pill">api</span>
     <button id="lang-btn" class="pill lang-btn" title="Change language / Mudar idioma">${getLocale() === 'pt' ? 'PT-BR' : 'EN'}</button>
+    <span class="pill" id="plan-pill">api</span>
     <span class="pill muted" title="Cmd/Ctrl+B">${t('blur_hint')}</span>
   `;
   document.body.prepend(wrap);
