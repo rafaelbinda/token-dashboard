@@ -41,6 +41,36 @@ The command:
 
 Leave it running; it re-scans every 30 seconds and pushes updates live. Stop with `Ctrl+C`.
 
+## Running the server
+
+The `dashboard` command is the main entry point. It covers the most common startup patterns:
+
+```bash
+# Scan sessions + start server + open browser (default)
+python3 cli.py dashboard
+
+# Start server without opening the browser automatically
+python3 cli.py dashboard --no-open
+
+# Skip the re-scan and use the cached DB (faster restart after the first run)
+python3 cli.py dashboard --no-scan
+
+# Use a different port
+PORT=9000 python3 cli.py dashboard
+```
+
+On the **first run**, the scan can take 20–60 seconds depending on how many sessions you have. Subsequent runs are incremental — only new or changed files are read.
+
+Once the server is up, verify it's responding:
+
+```bash
+curl http://127.0.0.1:8080/api/overview
+```
+
+Stop the server with `Ctrl+C`.
+
+> On Windows, replace `python3` with `py -3` if `python3` is not on your PATH.
+
 ## Where the data comes from
 
 Claude Code writes one JSONL file per session here:
